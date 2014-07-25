@@ -18,7 +18,6 @@ goog.require('goog.asserts');
  * @template T
  * @description An implementation of John von Neumann's sorted arrays in JavaScript. Implements insertion sort and binary search for fast insertion and deletion.
  * @author Aadit M Shah<aaditmshah@fastmail.fm>
- * @license MIT License
  * @see https://github.com/javascript/sorted-array
  */
 javascript.SortedArray = function() {
