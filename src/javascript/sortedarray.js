@@ -14,9 +14,9 @@ goog.require('goog.asserts');
  * sorted.remove(3);                            // [1, 2, 4, 5]
  * sorted.insert(3);                            // [1, 2, 3, 4, 5]
  * </code>
+ * An implementation of John von Neumann's sorted arrays in JavaScript. Implements insertion sort and binary search for fast insertion and deletion.
  * @constructor
  * @template T
- * @description An implementation of John von Neumann's sorted arrays in JavaScript. Implements insertion sort and binary search for fast insertion and deletion.
  * @author Aadit M Shah<aaditmshah@fastmail.fm>
  * @see https://github.com/javascript/sorted-array
  */
@@ -33,6 +33,7 @@ javascript.SortedArray = function() {
 
 /**
  * @param {!T} element
+ * @return {!javascript.SortedArray}
  */
 javascript.SortedArray.prototype.insert = function(element) {
   goog.asserts.assert(goog.isDefAndNotNull(element));
@@ -81,6 +82,7 @@ javascript.SortedArray.prototype.search = function(element) {
 
 /**
  * @param {!T} element
+ * @return {!javascript.SortedArray}
  */
 javascript.SortedArray.prototype.remove = function(element) {
   goog.asserts.assert(goog.isDefAndNotNull(element));
@@ -116,4 +118,12 @@ javascript.SortedArray.prototype.innerArray = function() {
  */
 javascript.SortedArray.prototype.size = function() {
   return this.array_.length;
+};
+
+
+/**
+ *
+ */
+javascript.SortedArray.prototype.clear = function() {
+this.array_.length = 0;
 };
